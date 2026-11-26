@@ -1,0 +1,11 @@
+# asm-lsp config: NASM syntax, x86-64 instruction set
+[default_config]
+assembler = "nasm"
+instruction_set = "x86/x86-64"
+
+[default_config.opts]
+compiler = "nasm"
+# Flags used for live diagnostics (the source file is appended automatically)
+compile_flags_txt = ["-f", "elf64", "-w+all", "-o", "/dev/null"]
+diagnostics = true
+default_diagnostics = true
